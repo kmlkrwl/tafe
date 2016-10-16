@@ -1,6 +1,6 @@
-import java.until.Scanner;
+import java.util.Scanner;
 
-public Class Bmi {
+public class Bmi {
 	private final static double OB_III= 40;
 
     private final static double OB_II_LO = 35;
@@ -14,12 +14,14 @@ public Class Bmi {
     private final static String ENTER_WEIGHT = "Enter weight in Kg :";
     private final static String ENTER_HEIGHT = "Enter height in meters :";
 
-	public static void public static void main(String[] args) {
+	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
+		System.out.println("Enter weight in Kg: ");
 		double weight = input.nextDouble();
+		System.out.println("Enter height in m: ");
 		double height = input.nextDouble();
-		double mBmi = calculateBmi(weight,height);
-		showBmiResult(mBmi);
+		double bmi = calculateBmi(weight,height);
+		showBmiResult(bmi);
 
 	}
 
@@ -29,8 +31,9 @@ public Class Bmi {
     /** takes bmi as a parameter
 	* shows results as string
     */ 
-    public static void showBmiResult(double bmi) {
-        double mBmi = calculateBmi();
+    
+    public static void showBmiResult(double mBmi) {
+    
         if (mBmi >= OB_III ) {
             System.out.println("Obesity level III");
         } else if (mBmi>OB_II_LO){
