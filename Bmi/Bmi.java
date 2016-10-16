@@ -16,9 +16,9 @@ public class Bmi {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		System.out.println("Enter weight: ");
+		System.out.println("Enter weight in Kg: ");
 		double weight = input.nextDouble();
-		System.out.println("Enter height: ");
+		System.out.println("Enter height in m: ");
 		double height = input.nextDouble();
 		double bmi = calculateBmi(weight,height);
 		showBmiResult(bmi);
