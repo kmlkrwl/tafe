@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Bmi {
 	private final static double OB_III= 40;
@@ -14,27 +13,38 @@ public class Bmi {
     private final static String ENTER_WEIGHT = "Enter weight in Kg :";
     private final static String ENTER_HEIGHT = "Enter height in meters :";
 
-	public static void main(String[] args) {
-		Scanner input = new Scanner (System.in);
-		System.out.println("Enter weight: ");
-		double weight = input.nextDouble();
-		System.out.println("Enter height: ");
-		double height = input.nextDouble();
-		double bmi = calculateBmi(weight,height);
-		showBmiResult(bmi);
+	private double weight;
+	private double height;
 
+	public Bmi() {
+		
+	}
+	public Bmi(double weight,double height) {
+		this.weight = weight;
+		this.height = height;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double h) {
+		this.height = h;
+	}
+	
+	public double getWeight() {
+		return weight;
 	}
 
-	private static double calculateBmi(double weight, double height) {
-        return weight/(height*height);
-    }
-    /** takes bmi as a parameter
-	* shows results as string
-    */ 
-    
-    public static void showBmiResult(double mBmi) {
-    
-        if (mBmi >= OB_III ) {
+	public void setWeight(double w) {
+		this.weight = w;
+	}
+
+	public double getBmi() {
+		return height*height/weight;
+	}
+	
+	public void showResults() {
+		double mBmi = getBmi();
+		 if (mBmi >= OB_III ) {
             System.out.println("Obesity level III");
         } else if (mBmi>OB_II_LO){
             System.out.println("Obesity level II");
@@ -46,8 +56,5 @@ public class Bmi {
             System.out.println("Normal");
         } else
             System.out.println("Underweight");
-    }
-
-       
-   
+	}
 }

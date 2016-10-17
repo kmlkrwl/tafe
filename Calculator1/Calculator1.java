@@ -28,7 +28,7 @@ public class Calculator1 {
         result = calculate(number1,op,number2);
     
        drawLine();
-       System.out.printf("%f %c %f = %f\n",number1,op,number2,result);
+       System.out.printf("%.2f %c %.2f = %.2f\n",number1,op,number2,result);
        drawLine();
        
    }
@@ -38,7 +38,7 @@ public class Calculator1 {
 *num2 - number2
 *return the result 
 */
-    public static double calculate(double num1,char o,double num2) {
+    static double calculate(double num1,char o,double num2) {
         double r = 0;
         switch (o) {
             case '+' :
@@ -59,21 +59,29 @@ public class Calculator1 {
         } 
         return r;
     }
-    public static double add(double number1,double number2) {
+    
+//add numbers
+    static double add(double number1,double number2) {
         return number1 + number2;
     }
 
-    public static double subtract(double number1, double number2) {
+//subract numbers
+    static double subtract(double number1, double number2) {
         return number1-number2;
     }
 
-    public static double multiply(double number1, double number2) {
+//multiply
+    static double multiply(double number1, double number2) {
         return number1*number2;
     }
-    public static double divide(double number1, double number2) {
+
+//divide
+    static double divide(double number1, double number2) {
         return number1/number2;
     }
-    public static void drawLine() {
+
+//draw a line
+    static void drawLine() {
         System.out.println("___________________________");
     }
 }

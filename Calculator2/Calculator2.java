@@ -23,12 +23,13 @@ public class Calculator2 {
         JOptionPane.showMessageDialog( null, number1 + " " + operator + " " + number2 + " = "+ Float.toString(result), "Results", JOptionPane.PLAIN_MESSAGE );
     }
 /**
+* takes two numbers and an operator
 * num1 - Number1 
 *o - operator from either +,-,/ or *
 *num2 - number2
 *return the result 
 */
-    public static float calculate(int num1,char o,int num2) {
+    static float calculate(int num1,char o,int num2) {
         float r = 0;
         switch (o) {
             case '+' :
@@ -49,24 +50,29 @@ public class Calculator2 {
         } 
         return r;
     }
+
 //adds two numbers
-    public static int add(int number1,int number2) {
+     static int add(int number1,int number2) {
         return number1 + number2;
     }
+
 //subtract two numbers
-    public static int subtract(int number1, int number2) {
+     static int subtract(int number1, int number2) {
         return number1-number2;
     }
+
 // multiply two numbers
-    public static int multiply(int number1, int number2) {
+     static int multiply(int number1, int number2) {
         return number1/number2;
     }
+
 // divide two numbers
-    public static float divide(int number1, int number2) {
+     static float divide(int number1, int number2) {
         return (float) number1/number2;
     }
+    
 // drawLine
-    public static void drawLine() {
-        System.out.println("___________________________");
-    }
+    //  static void drawLine() {
+    //     System.out.println("___________________________");
+    // }
 }
