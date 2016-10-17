@@ -1,18 +1,6 @@
 
 public class Bmi {
-	private final static double OB_III= 40;
-
-    private final static double OB_II_LO = 35;
-
-    private final static double OB_I_LO = 30;
-
-    private final static double OVER_W8_LO = 25;
-
-    private final static double NORMAL_W8_LO = 19;
-
-    private final static String ENTER_WEIGHT = "Enter weight in Kg :";
-    private final static String ENTER_HEIGHT = "Enter height in meters :";
-
+	
 	private double weight;
 	private double height;
 
@@ -39,7 +27,7 @@ public class Bmi {
 	}
 
 	public double getBmi() {
-		return height*height/weight;
+		return weight/(height*height);
 	}
 	
 	public void showResults() {
@@ -57,4 +45,18 @@ public class Bmi {
         } else
             System.out.println("Underweight");
 	}
+
+//constants
+	private final static double OB_III= 40;
+
+    private final static double OB_II_LO = 35;
+
+    private final static double OB_I_LO = 30;
+
+    private final static double OVER_W8_LO = 25;
+
+    private final static double NORMAL_W8_LO = 19;
+
+   
+
 }
